@@ -1,0 +1,50 @@
+{
+  "name": "semantic-release-pnpm-deps",
+  "description": "It's a semantic-release plugin to analyze dependencies updates in pnpm workspace and auto publish a new version if necessary.",
+  "version": "0.0.1",
+  "author": "onlyhom",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "3.2.4"
+  },
+  "engines": {
+    "node": ">=14.17"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "semantic-release",
+    "pnpm",
+    "dependencies",
+    "semantic-release-monorepo",
+    "changelog",
+    "deps-analyzer",
+    "github",
+    "publish",
+    "release"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "semantic-release": ">=18.0.0 <20.0.0",
+    "semantic-release-monorepo": ">=7.0.0",
+    "semantic-release-plugin-pnpm": ">=1.0.0"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "es5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pretest": "npm run lint",
+    "semantic-release": "semantic-release",
+    "lint": "prettier --check \"{lib,test}/**/*.{js,json,ts}\" \"*.{md,json,js}\"",
+    "lint:fix": "prettier --write \"{lib,test}/**/*.{js,json,ts}\" \"*.{md,json,js}\""
+  }
+}
